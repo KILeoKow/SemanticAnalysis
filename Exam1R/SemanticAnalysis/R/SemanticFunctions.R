@@ -1,13 +1,34 @@
-library(usethis)
-use_git()
+#' @title TextPrep
+#'
 
-ls(package:usethis)
-use_mit_license()
-use_github()
+#' @param textfile
+#' @return vector with lowercase words extracted from txt file as elements
+#'
+#' @example "Hello, how are you?" returns c("hello", "how", "are" "you")
+#'
+#'
+#' @title comparison
+#'
+#' @param vector with words as elements
+#' @return calculates how many words in the vector appear in the original txt file
+#'
+#' @example comparison(positive) returns 2
+#'
+#' @title summary
+#'
+#' @param vector1
+#' @param vector2
+#'
+#' @return how many words of each vector appear in the original txt file and
+#' the ratio between these
+#'
+#' @example summary(positive, negative) returns 2, 5, and 0.4.
+#' since positive and negative vectors have 2 and 5 words appearing
+#' respectively in the txt file. 5/2 = 0.4 which is the ratio.
 
 
 
-##### Prepare the text file ####
+##### Transform text file to vector with words as elements ####
 
 TextPrep <- function(file) {
   ### read in the text
@@ -31,16 +52,15 @@ positive <- c(
   "happ*", "joy*", "excell*", "fantast*", "grea*",
   "wonder*", "amaz*", "posit*", "deligh*", "cheer*",
   "brilli*", "inspi*", "uplif*", "lov*", "succ*",
-  "prosp*", "hope*", "dyna*", "enthusi*", "creat*"
-)
+  "prosp*", "hope*", "dyna*", "enthusi*", "creat*",
+  "reason*")
 
 negative <- c(
   "sad*", "angr*", "terrib*", "horrib*", "bad*",
   "awf*", "disap*", "negati*", "misera*", "frustra*",
   "dism*", "unhap*", "tox*", "fail*", "hopele*",
-  "pessim*", "stagn*", "bori*", "depres*", "woefu*"
-)
-
+  "pessim*", "stagn*", "bori*", "depres*", "woefu*", "fatig*",
+  "heav*", "naus*", "restl*")
 
 
 
@@ -56,7 +76,7 @@ comparison <- function(vector) {
     #### loops through each word in text checking if it matches words in vector
     for (word in Text) {
       if(startsWith(word, base_word)) {
-        print(word)
+        ### if it matches it adds to the counter.
         counter <- counter + 1
       }
     }
@@ -68,31 +88,15 @@ comparison(negative)
 comparison(positive)
 
 
-
-
-if (i %in% Text) {
-  counter <- counter + 1
-  print(i)
+#### This function summarizes output, returning how many words are positive
+#### or negative as well as the ratio between positive to negative words.
+summary <- function(positiveWords, negativeWords) {
+  print("Number of positive words")
+  print(comparison(positiveWords))
+  print("Number of negative words")
+  print(comparison(negativeWords))
+  print("Ratio of positive to negative words")
+  print(comparison(positiveWords)/comparison(negativeWords))
 }
 
-### Read into environment
-TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
-
-Text <- TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
-
-#### Function which compares positive or negative words with words in text
-
-
-
-for (j in splitText) {
-  if i == j
-  iterations <- 0
-  for (i in 1:length(arr)) {
-    iterations <- iterations + 1
-    if (arr[i] == target) {
-      return(iterations)
-    }
-
-}
-
-?endsWith()
+summary(positive, negative)
