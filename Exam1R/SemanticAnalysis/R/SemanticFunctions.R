@@ -89,7 +89,6 @@ comparison(positive)
 
 
 
-
 #### This function summarizes output, returning how many words are positive ####
 #### or negative as well as the ratio between positive to negative words.
 summary <- function(positiveWords, negativeWords) {
