@@ -12,7 +12,7 @@
 #' @param vector with words as elements
 #' @return calculates how many words in the vector appear in the original txt file
 #'
-#' @example comparison(positive) returns 2
+#' @example comparison(positive) returns 2 becuase two words in positive vector appear in txt file
 #'
 #' @title summary
 #'
@@ -44,6 +44,7 @@ TextPrep <- function(file) {
 
 #### Load final text vector into environment
 Text <- TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
+
 
 
 #### create vectors of negative and positive words ####
@@ -87,7 +88,9 @@ comparison(negative)
 comparison(positive)
 
 
-#### This function summarizes output, returning how many words are positive
+
+
+#### This function summarizes output, returning how many words are positive ####
 #### or negative as well as the ratio between positive to negative words.
 summary <- function(positiveWords, negativeWords) {
   print("Number of positive words")
