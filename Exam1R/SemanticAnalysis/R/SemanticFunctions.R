@@ -27,6 +27,12 @@ TextPrep <- function(file) {
     "prosperous", "hopeful", "dynamic", "enthusiastic", "creative"
   )
 
+  negative_words <- c(
+    "sad", "angry", "terrible", "horrible", "bad",
+    "awful", "disappointing", "negative", "miserable", "frustrating",
+    "dismal", "unhappy", "toxic", "failure", "hopeless",
+    "pessimistic", "stagnant", "boring", "depressing", "woeful"
+  )
 
   return(splitText)
 }
@@ -38,7 +44,6 @@ TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
 
 Text <- TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
 
-print(Text)
-tolower(Text)
-?strsplit
+#### Function which compares positive or negative words with words in text
+Comparison
 
