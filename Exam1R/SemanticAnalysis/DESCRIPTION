@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Leo", "Kowalski", , "leo.kowalski@ki.se", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: It takes a text file, and investigates how many positive or negative words are in this file. It also provides the ratio between these. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

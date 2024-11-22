@@ -23,8 +23,7 @@
 #' the ratio between these
 #'
 #' @example summary(positive, negative) returns 2, 5, and 0.4.
-#' since positive and negative vectors have 2 and 5 words appearing
-#' respectively in the txt file. 5/2 = 0.4 which is the ratio.
+
 
 
 
