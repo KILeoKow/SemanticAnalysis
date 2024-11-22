@@ -43,7 +43,7 @@ TextPrep <- function(file) {
 }
 
 #### Load final text vector into environment
-Text <- TextPrep("C:/Users/leokow/Downloads/Example_negative.txt")
+Text <- TextPrep("C:/Users/leokow/OneDrive - Karolinska Institutet/Dokument/Exam1R/SemanticAnalysis/Example_negative.txt")
 
 
 
